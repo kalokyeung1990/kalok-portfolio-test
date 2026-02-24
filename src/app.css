@@ -1,0 +1,74 @@
+/* Design tokens from Figma (Studio 2026) */
+:root {
+	/* Colors */
+	--color-bg: #f2f2f2;
+	--color-border: #e9e9e9;
+	--color-text: #000000;
+	--color-text-muted: #939393;
+	--color-accent: #0d00ff;
+	--color-white: #ffffff;
+
+	/* Spacing */
+	--space-xs: 2px;
+	--space-sm: 4px;
+	--space-md: 10px;
+	--space-lg: 20px;
+	--space-xl: 40px;
+
+	/* Border radius */
+	--radius: 4px;
+
+	/* Type scale */
+	--text-sm: 10px;
+	--text-base: 14px;
+	--text-lg: 18px;
+	--text-xl: 24px;
+
+	/* Line height */
+	--lh-tight: 14px;
+	--lh-normal: 16px;
+
+	/* Layout */
+	--sidebar-width: 288px;
+	--content-max: 824px;
+
+	/* Font — Kern is a commercial font; replace with your licensed copy */
+	--font-sans: 'Kern', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: var(--font-sans);
+	font-size: var(--text-base);
+	line-height: var(--lh-normal);
+	color: var(--color-text);
+	background: var(--color-white);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul, ol {
+	list-style: none;
+}
