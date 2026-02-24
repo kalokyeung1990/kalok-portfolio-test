@@ -2,6 +2,7 @@ export interface Project {
 	_id: string;
 	title: string;
 	slug: string;
+	thumbnailUrl?: string;
 	thumbnail: SanityImage;
 	images: SanityImage[];
 	description: string;
