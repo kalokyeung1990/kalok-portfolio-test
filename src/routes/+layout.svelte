@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import { fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import { placeholderProjects } from '$lib/sanity';
 	import { page } from '$app/state';
@@ -25,7 +25,7 @@
 </svelte:head>
 
 {#if mounted}
-	<div class="layout" in:fade={{ duration: 1000 }}>
+	<div class="layout" in:fly={{ y: 20, duration: 1000 }}>
 		<Sidebar {projects} {activeSlug} />
 		<main class="content">
 			{@render children()}
