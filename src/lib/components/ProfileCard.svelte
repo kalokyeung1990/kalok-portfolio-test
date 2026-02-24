@@ -1,6 +1,6 @@
 <script lang="ts">
-	let { expanded = false } = $props();
-	let isExpanded = $state(false);
+	let { expanded = true } = $props();
+	let isExpanded = $state(true);
 
 	$effect(() => {
 		isExpanded = expanded;
@@ -9,15 +9,15 @@
 
 <div class="profile-card">
 	<div class="profile-header">
-		<p class="profile-name">Kalok Yeung</p>
+		<a href="/" class="profile-name">Kalok Yeung</a>
 		<button class="profile-toggle" onclick={() => isExpanded = !isExpanded}>
 			{isExpanded ? '−' : '+'}
 		</button>
 	</div>
-	<p class="profile-tagline">
-		Designing playful, functional digital experiences for a better internet
-	</p>
 	{#if isExpanded}
+		<p class="profile-tagline">
+			Designing playful, functional digital experiences for a better internet
+		</p>
 		<nav class="profile-nav">
 			<a href="/work">Work</a>
 			<a href="/about">About</a>
